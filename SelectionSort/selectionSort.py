@@ -40,7 +40,7 @@ def shuffle_random(n):
     return result
 
 
-options = [1000, 10000, 30000, 60000]
+options = [100, 1000, 3000, 6000]
 results_random = []
 results_reverse = []
 for option in options:

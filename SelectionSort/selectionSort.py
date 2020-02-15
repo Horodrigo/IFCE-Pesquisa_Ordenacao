@@ -19,19 +19,18 @@ def plotaImagem(x,y,xl = "Entradas", yl = "Saídas", name='graph.png'):
     fig.savefig(name)
 
 
-def selectionSort(listaElementos):
-  numeroTroca = 0
-  for i in range(len(listaElementos)): 
-      
-    minIndex = i 
-    for j in range(i+1, len(listaElementos)): 
-      numeroTroca = numeroTroca + 1
-      if listaElementos[minIndex] > listaElementos[j]: 
-        minIndex = j
-            
-    if minIndex != 1:
-      listaElementos[i], listaElementos[minIndex] = listaElementos[minIndex], listaElementos[i]
-  return numeroTroca
+def selectionsort(to_sort):
+    clone = to_sort.copy()
+    length = len(clone)
+    for count, _ in enumerate(clone):
+        pivot = count
+        for count2 in range(count+1, length-1):
+            if clone[count2] < clone[pivot]:
+                # clone[count2], clone[pivot] = clone[pivot], clone[count2]
+                pivot = count2
+        if clone[count] > clone[pivot]:
+            clone[count], clone[pivot] = clone[pivot], clone[count]
+    return clone
 
 
 def shuffle_random(n):

@@ -9,7 +9,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 
-def plotaImagem(x,y,xl = "Tamanho", yl = "tempo", name='graph.png'):
+def plotaImagem(x,y,xl = "Tamanho", yl = "Tempo", name='graph.png'):
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111)
     ax.plot(x,y, label = "Melhor Tempo")
